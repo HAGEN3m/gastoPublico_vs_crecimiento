@@ -1,88 +1,88 @@
 # Proyecto: Impacto del Gasto Público en el Crecimiento Económico
 
-Este proyecto tiene como objetivo analizar la relación entre el gasto público y el crecimiento económico utilizando datos de organismos internacionales. Se aplicarán técnicas de análisis de datos, visualización y modelado estadístico para explorar posibles correlaciones o patrones relevantes.
+Este proyecto analiza la relación entre el gasto público y el crecimiento económico utilizando datos de países con diferentes niveles de desarrollo. Se utilizarán herramientas de análisis de datos, visualización y modelos econométricos para identificar patrones y posibles correlaciones.
 
 ---
 
-## 📊 Objetivos
-
-* Evaluar si existe una relación significativa entre el gasto público y el crecimiento del PBI en distintos países.
-* Comparar resultados por regiones o niveles de ingreso.
-* Explorar si hay umbrales donde el gasto público tiene efectos positivos o negativos.
-
----
-
-## 📂 Estructura del proyecto
+## 🗂 Estructura del Proyecto
 
 ```
 gastoPublico_vs_crecimiento/
-├── data/                   # Datos crudos y procesados
-├── notebooks/              # Jupyter Notebooks por etapa
-│   ├── 01_eda.ipynb
-│   ├── 02_limpieza.ipynb
-│   ├── 03_modelado.ipynb
-│   ├── 04_visualizaciones.ipynb
-│   └── 05_conclusiones.ipynb
-├── .venv/                  # Entorno virtual
-├── requirements.txt        # Dependencias
-└── README.md               # Documentación del proyecto
+│
+├── data/                      # Archivos de datos crudos y procesados
+│   ├── raw/                   # Datos descargados directamente de fuentes externas
+│   └── processed/             # Datos ya limpios y listos para el análisis
+│
+├── notebooks/                # Notebooks del flujo de análisis
+│   ├── 01_eda.ipynb           # Análisis exploratorio de los datos
+│   ├── 02_limpieza.ipynb      # Limpieza y transformación de los datos
+│   ├── 03_modelado.ipynb      # Modelos de regresión y análisis estadístico
+│   └── 04_visualizaciones.ipynb  # Visualizaciones finales y storytelling
+│
+├── visualizaciones/          # Exportaciones de gráficos y dashboards
+│   ├── png/                   # Gráficos exportados en formato imagen
+│   ├── powerbi/               # Archivos de Power BI (.pbix)
+│   └── tableau/               # Archivos de Tableau o exportaciones PDF
+│
+├── README.md                 # Descripción general del proyecto (este archivo)
+└── .gitignore                # Archivos a ignorar por git
 ```
 
 ---
 
-## 🔍 Datos utilizados
+## 🌍 Países seleccionados (muestra no sesgada)
 
-Se utilizarán datos de fuentes abiertas como:
-
-* [Banco Mundial (WB)](https://data.worldbank.org/)
-* [FMI](https://www.imf.org/en/Data)
-* [OCDE](https://data.oecd.org/)
-
-Indicadores clave:
-
-* **Gasto público (% del PBI)**
-* **PBI per cápita**
-* **Crecimiento del PBI anual (%)**
-* **Población total**
+* Estados Unidos (USA)
+* Alemania (DEU)
+* Japón (JPN)
+* Argentina (ARG)
+* India (IND)
+* Sudáfrica (ZAF)
+* Nigeria (NGA)
+* México (MEX)
+* Indonesia (IDN)
+* Suecia (SWE)
 
 ---
 
-## 📚 Herramientas
+## 📊 Indicadores a analizar
 
-* Python 3
+| Indicador                       | Código WB         |
+| ------------------------------- | ----------------- |
+| Gasto público (% del PIB)       | GC.XPN.TOTL.GD.ZS |
+| PIB per cápita (USD constantes) | NY.GDP.PCAP.KD    |
+| Crecimiento del PIB (% anual)   | NY.GDP.MKTP.KD.ZG |
+| Población total                 | SP.POP.TOTL       |
+
+---
+
+## 🧰 Herramientas y tecnologías utilizadas
+
+* Python (pandas, numpy, matplotlib, seaborn, scikit-learn)
 * Jupyter Notebooks
-* Pandas, Seaborn, Matplotlib, Scikit-learn
-* WBData para acceso a datos del Banco Mundial
-* Visualizaciones complementarias en Power BI / Tableau (opcional)
+* wbdata (API del Banco Mundial)
+* Git y GitHub
+* Visualización avanzada (Power BI, Tableau, Looker Studio)
 
 ---
 
-## 🔄 Reproducibilidad
+## 🎯 Objetivo
 
-1. Clonar el repositorio
-2. Crear entorno virtual:
-
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
-3. Instalar dependencias:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Ejecutar los notebooks en orden desde la carpeta `notebooks/`
+Explorar si existe una correlación relevante entre el nivel de gasto público y el crecimiento económico entre países de diferentes regiones y niveles de desarrollo, durante el período 2000–2023.
 
 ---
 
-## 📈 Resultado esperado
+## 📌 Estado del proyecto
 
-* Análisis visual y cuantitativo del impacto del gasto público
-* Conclusiones por país, región o nivel de ingreso
-* Modelo predictivo simple del crecimiento económico basado en indicadores fiscales
+* [x] Estructura inicial
+* [x] Configuración del repositorio y .gitignore
+* [ ] Descarga y limpieza de datos
+* [ ] Modelado y análisis econométrico
+* [ ] Visualizaciones finales
+* [ ] Conclusiones y recomendaciones
 
 ---
 
-## 📖 Autor
+## 📁 Fuente de datos
 
-Tomas — 2025
+Todos los datos provienen de la API oficial del Banco Mundial: [https://data.worldbank.org/](https://data.worldbank.org/)
