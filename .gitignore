@@ -1,0 +1,25 @@
+# Entornos virtuales
+.venv/
+env/
+venv/
+
+# Archivos temporales de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Archivos de Jupyter Notebook
+.ipynb_checkpoints/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Datos grandes o sensibles
+*.csv
+*.xlsx
+*.json
+
+# Configuración de VSCode u otros editores
+.vscode/
